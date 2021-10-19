@@ -1,6 +1,7 @@
 FROM golang:1.16-alpine AS build
 RUN apk add --no-cache git
-RUN go get ggithub.com/golang/glog
+RUN go env -w GOPROXY=https://goproxy.cn,direct
+RUN go get github.com/golang/glog
 
 COPY Gopkg.lock Gopkg.toml /go/src/project/
 WORKDIR /go/src/project/
