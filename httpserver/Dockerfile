@@ -1,3 +1,4 @@
+# 在amd64服务器下创建成功
 FROM golang:1.17.2-alpine AS build
 RUN apk add --no-cache git
 ## CGO_ENABLED=0 要不然编译文件，无法执行 https://blog.csdn.net/u013235478/article/details/105852353/
